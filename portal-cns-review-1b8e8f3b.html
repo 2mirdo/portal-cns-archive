@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界杯 · 门户与叙事</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5eee7;
+      font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+      color: #2e2b27;
+      line-height: 1.7;
+      padding: 2rem 1.5rem 4rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 740px;
+      width: 100%;
+    }
+
+    /* 开场短句 —— 像引言一样 */
+    .opening {
+      font-size: 1.5rem;
+      letter-spacing: 0.02em;
+      color: #4b423b;
+      border-left: 4px solid #b08f7a;
+      padding-left: 1.2rem;
+      margin: 1.8rem 0 2.2rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .opening strong {
+      font-weight: 600;
+      color: #2e1c12;
+    }
+
+    /* 承接段落 */
+    p {
+      margin-bottom: 1.4rem;
+      font-size: 1.05rem;
+      text-align: justify;
+      word-break: break-word;
+    }
+
+    /* 特点列表 - 带装饰 */
+    .feature-block {
+      background: #faf6f1;
+      border-radius: 16px;
+      padding: 1.6rem 2rem 1.2rem;
+      margin: 2rem 0 2.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e3d8cf;
+    }
+
+    .feature-block h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #3f332b;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .feature-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-block li {
+      padding: 0.55rem 0 0.55rem 1.8rem;
+      position: relative;
+      font-size: 1rem;
+      border-bottom: 1px dashed #e8ddd4;
+    }
+
+    .feature-block li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-block li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #b08f7a;
+      font-size: 0.9rem;
+      top: 0.6rem;
+    }
+
+    /* 引用块/提示框 */
+    .note-box {
+      background: #eae2da;
+      border-radius: 12px;
+      padding: 1.4rem 1.8rem;
+      margin: 2rem 0 2rem;
+      font-size: 0.98rem;
+      border-left: 5px solid #7f6657;
+      color: #2f2823;
+    }
+
+    .note-box strong {
+      color: #3b2c22;
+    }
+
+    /* 温和结尾区 */
+    .closing {
+      margin-top: 2.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #d9cdc3;
+      font-size: 0.98rem;
+      color: #4e443c;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.8rem;
+    }
+
+    .closing a {
+      color: #6a4f3e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.2s;
+    }
+
+    .closing a:hover {
+      color: #9b755a;
+      text-decoration-thickness: 2px;
+    }
+
+    /* 内嵌链接——非按钮感 */
+    .inline-link {
+      color: #6a4f3e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      font-weight: 500;
+      transition: background 0.1s;
+    }
+
+    .inline-link:hover {
+      background: #f0e6db;
+      text-decoration-thickness: 2px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 520px) {
+      body {
+        padding: 1.2rem 1rem 3rem;
+      }
+
+      .opening {
+        font-size: 1.2rem;
+        padding-left: 1rem;
+        margin: 1rem 0 1.6rem;
+      }
+
+      .feature-block {
+        padding: 1.2rem 1.2rem 0.8rem;
+      }
+
+      .feature-block li {
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      .closing {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* 小字辅助 */
+    .footnote {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #7f7065;
+      text-align: center;
+      border-top: 1px solid #d9cdc3;
+      padding-top: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 开场短句：故事感 -->
+    <div class="opening">
+      <strong>世界杯</strong> —— 一个词跨越地理与语言，成为全球数十亿人共同的叙事坐标。
+    </div>
+
+    <!-- 承接段落：从站点介绍与可信说明切入 -->
+    <p>
+      在信息庞杂的赛事季节里，一个可靠、结构清晰的聚合门户显得尤为重要。
+      <a href="https://portal-cns-worldcup.com" class="inline-link">世界杯</a> 主题门户便是这样一处存在：
+      它并非官方机构的替代，而是一个由长期关注足球生态的信息团队维护的索引式站点，
+      致力于整合赛程、队伍沿革、举办国档案与关键数据，减少信息碎片带来的误解。
+    </p>
+
+    <p>
+      该站点不生产原始赛事信号，也不提供未经核实的即时传闻；其内容筛选原则以公开资料与可交叉验证的信息为基础。
+      对于希望建立对赛事整体图景认知的浏览者而言，它更像一道经过梳理的走廊，通往更深的背景与上下文。
+    </p>
+
+    <!-- 特点列表：以知识型视角呈现站点特质 -->
+    <div class="feature-block">
+      <h3>▎站点内容特点简述</h3>
+      <ul>
+        <li><strong>结构化档案</strong> — 历届主办国、决赛比分、参赛队伍变动，以时间线方式呈现，便于横向比较。</li>
+        <li><strong>中立概要</strong> — 不渲染对立或戏剧性，侧重事实陈述与背景补充，如赛制变迁、规则修订历史。</li>
+        <li><strong>可信参照</strong> — 引用来源包括 FIFA 官方文档、各大洲足联公开记录及权威体育数据机构。</li>
+        <li><strong>轻量访问</strong> — 页面侧重信息密度，减少冗余脚本与广告干扰，适配多种终端阅读。</li>
+      </ul>
+    </div>
+
+    <!-- 引用块 / 提示框：进一步加强可信说明 -->
+    <div class="note-box">
+      <strong>📌 提示：</strong> 如果你正在寻找赛程直播或即时比分，该站更适合作为背景资料的补充。其价值在于帮助浏览者理解赛事结构，而非替代实时转播。
+    </div>
+
+    <!-- 温和结尾：总结 + 自然嵌入链接（不用“进入、点击”等） -->
+    <div class="closing">
+      <span>在众多赛事信息流中，一个经过梳理的起点往往比漫无目的浏览更有效率。</span>
+      <span>← <a href="https://portal-cns-worldcup.com">世界杯</a> 门户 · 叙事与索引</span>
+    </div>
+
+    <!-- 微脚注：风格上保持一致 -->
+    <div class="footnote">
+      基于公开信息整理 · 内容方向保持中立与知识性
+    </div>
+  </div>
+</body>
+</html>
